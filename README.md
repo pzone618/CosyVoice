@@ -81,6 +81,44 @@
 | Fun-CosyVoice3-0.5B-2512_RL | ✅ | 0.5B | 0.81 | 77.4 | 1.68 | 69.5 | 5.44 | 75.0 |
 
 
+## 🚀 Quick Start (Local / macOS)
+
+If you are running on macOS (Apple Silicon) or using Python 3.13+, follow these steps for the smoothest experience.
+
+### 1. Environment Setup (venv)
+
+```bash
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the environment
+source venv/bin/activate
+
+# Install dependencies
+# Note: requirements.txt is optimized for Python 3.13 compatibility
+pip install -r requirements.txt
+# (Optional) If you encounter 'sox' errors on Mac: brew install sox
+```
+
+### 2. Download Models
+
+We have provided a helper script to download the minimal required models (`Fun-CosyVoice3-0.5B`).
+
+```bash
+# Make sure your venv is active
+python download_models.py
+```
+
+### 3. Run WebUI
+
+```bash
+python webui.py --port 50000 --model_dir pretrained_models/Fun-CosyVoice3-0.5B
+```
+
+Then open [http://localhost:50000](http://localhost:50000) in your browser.
+
+---
+
 ## Install
 
 ### Clone and install
